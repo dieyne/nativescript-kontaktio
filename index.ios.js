@@ -1,9 +1,18 @@
 "use strict";
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
 var Proximity;
 (function (Proximity) {
     Proximity[Proximity["UNKNOWN"] = 0] = "UNKNOWN";
@@ -11,7 +20,7 @@ var Proximity;
     Proximity[Proximity["NEAR"] = 2] = "NEAR";
     Proximity[Proximity["FAR"] = 3] = "FAR";
 })(Proximity = exports.Proximity || (exports.Proximity = {}));
-var BeaconDiscover = (function () {
+var BeaconDiscover = /** @class */ (function () {
     function BeaconDiscover(apiKey) {
         Kontakt.setAPIKey(apiKey);
         this.delegate = KTKBeaconManagerDelegateImpl.new().initWithDiscover(this);
@@ -45,7 +54,7 @@ var BeaconDiscover = (function () {
     return BeaconDiscover;
 }());
 exports.BeaconDiscover = BeaconDiscover;
-var BeaconWrapper = (function () {
+var BeaconWrapper = /** @class */ (function () {
     function BeaconWrapper(raw) {
         this.raw = raw;
     }
@@ -99,7 +108,7 @@ var BeaconWrapper = (function () {
     };
     return BeaconWrapper;
 }());
-var KTKBeaconManagerDelegateImpl = (function (_super) {
+var KTKBeaconManagerDelegateImpl = /** @class */ (function (_super) {
     __extends(KTKBeaconManagerDelegateImpl, _super);
     function KTKBeaconManagerDelegateImpl() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -128,6 +137,6 @@ var KTKBeaconManagerDelegateImpl = (function (_super) {
         }
         this.discover.pullBeacons(beaconsArray);
     };
+    KTKBeaconManagerDelegateImpl.ObjCProtocols = [KTKBeaconManagerDelegate];
     return KTKBeaconManagerDelegateImpl;
 }(NSObject));
-KTKBeaconManagerDelegateImpl.ObjCProtocols = [KTKBeaconManagerDelegate];

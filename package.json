@@ -1,7 +1,7 @@
 {
     "name": "nativescript-kontaktio-v2",
-    "version": "1.0.0",
-    "description": "NativeScript Plugin for Kontakt io Beacons",
+    "version": "1.0.1",
+    "description": "NativeScript Plugin for Kontakt io Beacons.I noticed a problem of the list of beacons => when we lose the beacons we always have the last beacon in the list.",
     "main": "index.js",
     "typings": "index.d.ts",
     "nativescript": {
@@ -16,19 +16,19 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Juneil/nativescript-kontaktio.git"
+        "url": "git+https://github.com/dieyne/nativescript-kontaktio.git"
     },
     "keywords": [
         "NativeScript",
         "Kontakt",
         "Beacon"
     ],
-    "author": "Juneil",
+    "author": "Dieyné Boudal Dram2",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Juneil/nativescript-kontaktio/issues"
+        "url": "https://github.com/dieyne/nativescript-kontaktio/issues"
     },
-    "homepage": "https://github.com/Juneil/nativescript-kontaktio#readme",
+    "homepage": "https://github.com/dieyne/nativescript-kontaktio#readme",
     "dependencies": {
         "nativescript-permissions": "^1.2.3"
     },

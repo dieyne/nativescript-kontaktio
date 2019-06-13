@@ -1,9 +1,5 @@
 android {
-  productFlavors {
-    "nativescript-kontaktio" {
-      dimension "nativescriptkontaktio"
-    }
-  }
+  
 }
 
 dependencies {
